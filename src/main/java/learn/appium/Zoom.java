@@ -5,7 +5,7 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;

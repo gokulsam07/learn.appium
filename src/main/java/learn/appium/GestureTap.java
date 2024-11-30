@@ -6,8 +6,8 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.Collections;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
@@ -37,7 +37,7 @@ public class GestureTap {
 		driver.findElement(By.xpath("//*[@content-desc='Username input field']")).sendKeys("bob@example.com");
 		driver.findElement(By.xpath("//*[@content-desc='Password input field']")).sendKeys("10203040");
 		tap(driver,driver.findElement(AppiumBy.accessibilityId("Login button")));
-		Assert.assertTrue("Login is unsuccessful",driver.findElement(By.xpath("//*[@text='Sauce Labs Bike Light']")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@text='Sauce Labs Bike Light']")).isDisplayed());
 		driver.quit();
 	}
 	

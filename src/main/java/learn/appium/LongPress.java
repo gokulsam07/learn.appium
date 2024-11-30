@@ -5,8 +5,8 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.Collections;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
@@ -36,7 +36,7 @@ public class LongPress {
 		tap(driver,driver.findElement(By.xpath("//*[@text='1. Custom Adapter']")));
 		longPressViaActions(driver,driver.findElement(By.xpath("//*[@text='People Names']")));
 		//longPress(driver,driver.findElement(By.xpath("//*[@text='People Names']")));
-		Assert.assertTrue("Menu is not visible",driver.findElement(By.xpath("//*[@text='Sample action']")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@text='Sample action']")).isDisplayed());
 		driver.quit();
 	}
 	

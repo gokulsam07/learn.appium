@@ -1,0 +1,7 @@
+selenide\appium\AndroidDriverProvider.class
+selenide\appium\SampleAndroidTest2.class
+learn\appium\LaunchAndroidDriver.class
+selenide\appium\RealDeviceProvider.class
+learn\appium\SwipeOrScroll.class
+selenide\appium\SampleAndroidTest.class
+learn\appium\Zoom.class

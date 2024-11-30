@@ -4,8 +4,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,7 +29,7 @@ public class UseAppiumPluginWait {
 		driver.findElement(By.xpath("//*[@content-desc='Username input field']")).sendKeys("bob@example.com");
 		driver.findElement(By.xpath("//*[@content-desc='Password input field']")).sendKeys("10203040");
 		driver.findElement(AppiumBy.accessibilityId("Login button")).click();
-		Assert.assertTrue("Login is unsuccessful",driver.findElement(By.xpath("//*[@text='Sauce Labs Bike Light']")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@text='Sauce Labs Bike Light']")).isDisplayed());
 		driver.quit();
 	} //during appium server launch -- use the following to include appium wait plugin to handle waits at server side, so that no need of explicit waits in the client side
 //appium --allow-cors --use-plugin=element-wait,device-farm

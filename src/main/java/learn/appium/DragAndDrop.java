@@ -6,8 +6,8 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.Collections;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
@@ -38,7 +38,7 @@ public class DragAndDrop {
 		WebElement target = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_2"));
 		//dragAndDrop(driver,src,target);
 		simpleDD(driver,src,target);
-		Assert.assertTrue("Drop didn't happen as expected", driver.findElement(By.xpath("//*[@text='Dropped!']")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@text='Dropped!']")).isDisplayed());
 		driver.quit();
 	}
 	
