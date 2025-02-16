@@ -1,0 +1,8 @@
+https://github.com/PowerShell/Win32-OpenSSH/releases -- Download ZIP -- run install ps1 script
+
+Run the following commands from powershell 
+
+sc.exe config sshd start= auto
+sc.exe config ssh-agent start= auto
+sc.exe start sshd
+sc.exe start ssh-agent
